@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "943069395466",
+    "firebase_url": "https://taxiapp-a333c-default-rtdb.firebaseio.com",
+    "project_id": "taxiapp-a333c",
+    "storage_bucket": "taxiapp-a333c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943069395466:android:c996ad383366008de23df3",
+        "android_client_info": {
+          "package_name": "com.taxi.driver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2bky2VdvYjvhjjkv5NxL-ETltT2sIEpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943069395466:android:777d7ea328da3f4be23df3",
+        "android_client_info": {
+          "package_name": "com.taxi.santacruz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2bky2VdvYjvhjjkv5NxL-ETltT2sIEpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943069395466:android:2858f9afd2150c56e23df3",
+        "android_client_info": {
+          "package_name": "com.taxiapp.driver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2bky2VdvYjvhjjkv5NxL-ETltT2sIEpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943069395466:android:567f809a0ab5caaee23df3",
+        "android_client_info": {
+          "package_name": "com.taxiapp.passenger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2bky2VdvYjvhjjkv5NxL-ETltT2sIEpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8fafc">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚗"
+            android:textSize="64sp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Cuenta (Conductor)"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0f172a"
+            android:layout_marginBottom="32dp"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Nombre completo"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:text="+591"
+                android:inputType="phone"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:hint="Teléfono (ej: 70000000)"
+                android:inputType="phone"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerVehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Vehículo (ej: Toyota Corolla)"
+            android:inputType="text"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etLicensePlate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Placa (ej: ABC-123)"
+            android:inputType="text"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Foto de Perfil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Perfil"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUploadProfileGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadProfileCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProfileStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Foto de RUAT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de RUAT"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUploadRUATGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadRUATCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRUATStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Foto del Auto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto del Auto"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUploadVehicleGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadVehicleCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvVehicleStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Foto de Licencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Licencia"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUploadLicenseGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadLicenseCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLicenseStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Foto de CI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de CI"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUploadCIGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadCICamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCIStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Contraseña (mínimo 6 caracteres)"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_input"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Registrarse"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#16a34a"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
+            android:textSize="14sp"
+            android:textColor="#16a34a"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+</ScrollView>
