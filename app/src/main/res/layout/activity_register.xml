@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8fafc"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚗"
+            android:textSize="64sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Cuenta (Conductor)"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0f172a"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- SECCIÓN: DATOS DEL CONDUCTOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_rounded"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datos del Conductor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#16a34a"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Apellido"
+                android:inputType="textPersonName"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/etCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="+591"
+                    android:inputType="phone"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:hint="Teléfono (ej: 70000000)"
+                    android:inputType="phone"
+                    android:background="@drawable/bg_input"
+                    android:paddingHorizontal="16dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Correo electrónico (opcional)"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Contraseña (mínimo 6 caracteres)"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Foto de Perfil -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Perfil"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadProfileGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadProfileCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProfileStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Foto de Licencia - Anverso -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Licencia (Anverso)"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadLicenseFrontGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadLicenseFrontCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLicenseFrontStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Foto de Licencia - Reverso -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Licencia (Reverso)"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadLicenseBackGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadLicenseBackCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLicenseBackStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Foto de CI - Anverso -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Carnet (Anverso)"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadCIFrontGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadCIFrontCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCIFrontStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Foto de CI - Reverso -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de Carnet (Reverso)"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadCIBackGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadCIBackCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCIBackStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"/>
+
+        </LinearLayout>
+
+        <!-- SECCIÓN: DATOS DEL VEHÍCULO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_white_rounded"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Datos del Vehículo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#16a34a"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etVehicleBrand"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Marca (ej: Toyota)"
+                android:inputType="text"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etVehicleModel"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Modelo (ej: 2025)"
+                android:inputType="number"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etLicensePlate"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Placa (ej: ABC-123)"
+                android:inputType="text"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Color del Vehículo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color del Vehículo"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:id="@+id/colorWhite"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_white"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"/>
+
+                <View
+                    android:id="@+id/colorBlack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_black"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"/>
+
+                <View
+                    android:id="@+id/colorSilver"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_silver"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"/>
+
+                <View
+                    android:id="@+id/colorGray"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_gray"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"/>
+
+                <View
+                    android:id="@+id/colorRed"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_red"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"/>
+
+                <View
+                    android:id="@+id/colorBlue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_blue"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSelectedColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color seleccionado: Ninguno"
+                android:textSize="12sp"
+                android:textColor="#6b7280"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Tipo de Vehículo -->
+            <Spinner
+                android:id="@+id/spinnerVehicleType"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Tipo de Vagoneta (solo visible si es vagoneta) -->
+            <Spinner
+                android:id="@+id/spinnerVanType"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_input"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"/>
+
+            <!-- Foto de RUAT -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto de RUAT"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadRUATGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadRUATCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRUATStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Foto del Vehículo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto del Vehículo (ver placa)"
+                android:textSize="14sp"
+                android:textColor="#374151"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <Button
+                    android:id="@+id/btnUploadVehicleGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📷 Galería"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#3b82f6"/>
+
+                <Button
+                    android:id="@+id/btnUploadVehicleCamera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🎥 Cámara"
+                    android:backgroundTint="#3b82f6"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvVehicleStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ No seleccionada"
+                android:textSize="12sp"
+                android:textColor="#ef4444"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Registrarse"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#16a34a"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
+            android:textSize="14sp"
+            android:textColor="#16a34a"
+            android:clickable="true"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

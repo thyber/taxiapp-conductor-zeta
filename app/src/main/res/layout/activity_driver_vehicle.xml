@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🚗 Mi Vehículo"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1f2937" />
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="✏️ Editar"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#3b82f6"
+                android:textColor="#ffffff"
+                android:elevation="2dp" />
+
+        </LinearLayout>
+
+        <!-- MODO VISTA -->
+        <LinearLayout
+            android:id="@+id/viewMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- MARCA (VISTA) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marca"
+                    android:textSize="12sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvVehicleBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- MODELO (VISTA) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modelo"
+                    android:textSize="12sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvVehicleModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- PLACA (VISTA) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Placa"
+                    android:textSize="12sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvLicensePlate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- COLOR (VISTA) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="#ffffff"
+                android:padding="16dp"
+                android:elevation="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color"
+                    android:textSize="12sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvVehicleColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- MODO EDICIÓN -->
+        <LinearLayout
+            android:id="@+id/editMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- MARCA (EDITAR) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Marca"
+                    android:textSize="14sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etVehicleBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:hint="Ej: Toyota" />
+
+            </LinearLayout>
+
+            <!-- MODELO (EDITAR) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modelo"
+                    android:textSize="14sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etVehicleModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:hint="Ej: 2025" />
+
+            </LinearLayout>
+
+            <!-- PLACA (EDITAR) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Placa"
+                    android:textSize="14sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etLicensePlate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:hint="Ej: ABC123" />
+
+            </LinearLayout>
+
+            <!-- COLOR (EDITAR) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color"
+                    android:textSize="14sp"
+                    android:textColor="#6b7280"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/etVehicleColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input"
+                    android:padding="12dp"
+                    android:textSize="16sp"
+                    android:textColor="#1f2937"
+                    android:hint="Ej: Blanco" />
+
+            </LinearLayout>
+
+            <!-- BOTONES -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="❌ Cancelar"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#ef4444"
+                    android:textColor="#ffffff"
+                    android:elevation="4dp"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnSaveVehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="💾 Guardar"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#10b981"
+                    android:textColor="#ffffff"
+                    android:elevation="4dp"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

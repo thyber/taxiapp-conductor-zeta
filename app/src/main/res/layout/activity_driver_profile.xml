@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 Mis Datos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1f2937"
+            android:layout_marginBottom="20dp" />
+
+        <!-- NOMBRE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="14sp"
+                android:textColor="#6b7280"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1f2937"
+                android:hint="Tu nombre" />
+
+        </LinearLayout>
+
+        <!-- APELLIDO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellido"
+                android:textSize="14sp"
+                android:textColor="#6b7280"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1f2937"
+                android:hint="Tu apellido" />
+
+        </LinearLayout>
+
+        <!-- TELÉFONO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfono"
+                android:textSize="14sp"
+                android:textColor="#6b7280"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1f2937"
+                android:hint="Tu teléfono"
+                android:inputType="phone" />
+
+        </LinearLayout>
+
+        <!-- CORREO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo (opcional)"
+                android:textSize="14sp"
+                android:textColor="#6b7280"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="#1f2937"
+                android:hint="Tu correo electrónico"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <!-- BOTÓN GUARDAR -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💾 Guardar Cambios"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#10b981"
+            android:textColor="#ffffff"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+</ScrollView>

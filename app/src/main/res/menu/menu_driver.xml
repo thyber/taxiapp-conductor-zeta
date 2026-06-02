@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="📢 Notificaciones"
+        android:icon="@android:drawable/ic_dialog_email" />
+    
+    <item
+        android:id="@+id/nav_history"
+        android:title="📊 Historial de Carreras"
+        android:icon="@android:drawable/ic_menu_recent_history" />
+    
+    <item
+        android:id="@+id/nav_balance"
+        android:title="💰 Saldo y Comisiones"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+    
+    <item
+        android:id="@+id/nav_profile"
+        android:title="👤 Mis Datos"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+    
+    <item
+        android:id="@+id/nav_vehicle"
+        android:title="🚗 Mi Vehículo"
+        android:icon="@android:drawable/ic_menu_directions" />
+    
+    <item
+        android:id="@+id/nav_support"
+        android:title="📞 Contactar Central"
+        android:icon="@android:drawable/ic_menu_call" />
+    
+    <item
+        android:id="@+id/nav_logout"
+        android:title="🚪 Cerrar Sesión"
+        android:icon="@android:drawable/ic_lock_power_off" />
+
+</menu>
